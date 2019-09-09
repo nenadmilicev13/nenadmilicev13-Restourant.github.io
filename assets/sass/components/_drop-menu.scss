@@ -1,0 +1,111 @@
+.drop-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    width: 203px;
+    border-top: 2px solid $cinnabar;
+    border-bottom: 2px solid $cinnabar;
+    
+    @include hover {
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: top;
+        transition: $dur $ease;
+    }
+
+    li {
+        display: block;
+        border-bottom: 1px solid rgba($grey, 0.18);
+        
+        @include hover {
+            transform: rotateX(95deg);
+            transition: $dur $ease;
+            transform-origin: 0 0;
+
+            &:hover {
+                .drop-menu2 {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    a {
+        color: $matterhorn;
+        padding: 6px 29px;
+        font-family: $font-main;
+        font-weight: 500;
+        text-transform: capitalize; 
+        display: block;
+
+        @include hover {
+            transition: $dur $ease;
+
+            &:hover {
+                color: $cinnabar;
+            }
+        }
+    }
+
+    @include mq($tablet) {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        display: none;
+        width: 100%;
+
+        >li {
+            border-bottom: none;
+            padding: 10px 0;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: $black;
+        }
+    }
+}
+
+.drop-menu2 {
+    top: -2px;
+    left: 100%;
+    position: absolute;
+
+    @include hover {
+        opacity: 0;
+        visibility: hidden;
+        transition: $dur $ease;
+    }
+
+    @include mq($tablet) {
+        position: static;
+    }
+}
+
+.drop-menu-arrow {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 42%;
+        right: 8px;
+        transform: rotate(45deg);
+        width: 8px;
+        height: 1px;
+        background-color: $black;   
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 57%;
+        right: 8px;
+        transform: rotate(-40deg);
+        width: 8px;
+        height: 1px;
+        background-color: $black;   
+    }
+}

@@ -1,0 +1,19 @@
+.entry-content {
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        font-family: $font-secondary;
+        color: $grey;
+    }
+   
+    @include mq($phone) {
+        p {
+            font-size: 13px;
+        }
+     }
+}
+
+.entry-content--center {
+    text-align: center;
+}

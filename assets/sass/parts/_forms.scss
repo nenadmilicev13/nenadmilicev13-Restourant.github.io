@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+## Forms
+--------------------------------------------------------------*/
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='date'] {
+    max-width: 433px;
+    width: 100%;
+    outline: none;
+    border: 1px solid $grey-original;
+    padding: 12px;
+    font-family: $font-main;
+    display: block;
+    margin-bottom: 22px;
+
+    &:hover {
+        border-color: $black;
+    }
+}
+
+::placeholder {
+    font-family: $font-secondary;
+    font-size: 16px;
+  }

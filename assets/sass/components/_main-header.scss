@@ -1,0 +1,117 @@
+.main-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: $white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    @include mq($phone) {
+        overflow-y: scroll;
+    }
+}
+
+.main-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq($tablet) {
+        display: block;
+    }
+}
+
+.main-header__logo {
+    position: relative;
+    margin-bottom: -23px;
+    width: 180px;
+
+    img {
+        width: 100%;
+        transition: $dur $ease;
+    }
+
+    @include mq($tablet) {
+        width: 130px;
+        margin-bottom: -18px;
+    }
+}
+
+.header-fixed .main-header__logo img {
+    width: 100px;
+    transition: $dur $ease;
+}
+
+.header-fixed .main-nav__link {
+    padding: 25px 0 25px 32px;
+
+    @include mq($tablet) {
+       padding: 0;
+    }
+}
+
+.main-nav {
+    @include mq($tablet) {
+       text-align: center;
+       background-color: $light;
+       box-shadow: 0 2px 5px rgba($black, 0.2);
+       z-index: 1;
+       position: relative;
+       display: none;
+    }
+}
+
+.main-nav__item {
+    display: inline-block;
+
+    @include hover {
+        &:hover {
+            >.drop-menu {
+                opacity: 1;
+                visibility: visible;
+
+                li {
+                    transform: rotateX(0);
+                    background-color: $white;
+                }
+            }
+
+            .mega-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: rotateX(0);
+
+                li {
+                    transform: rotateX(0);
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    @include mq($tablet) {
+        display: block;
+        border-top: 1px solid $grey-original;
+    }
+}
+
+.main-nav__link {
+    display: block;
+    padding: 50px 0 50px 32px;
+    color: $matterhorn;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: $dur $ease;
+
+    @include hover {
+        &:hover {
+            color: $cinnabar;
+        }
+    }
+
+    @include mq($tablet) {
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

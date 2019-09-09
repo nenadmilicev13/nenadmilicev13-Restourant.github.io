@@ -1,0 +1,95 @@
+.cards {
+    background-color: $light;
+    padding: 130px 0;
+    position: relative;
+
+    .slick-dots {
+        @include center(x, absolute);
+        bottom: 0;
+
+        &:focus {
+            outline: none;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 5px;
+
+            &:only-child {
+                display: none;
+            }
+        }
+
+        button {
+            width: 11px;
+            min-width: initial;
+            height: 11px;
+            padding: 0;
+            border: 1px solid $black;
+            border-radius: 50%;
+            background-color: transparent;
+            line-height: 9px;
+            text-indent: -2000em;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+	li.slick-active button {
+		background-color: $cinnabar;
+    }
+    
+    @include mq($tablet-l) {
+        padding: 70px 0;
+    }
+}
+
+.card__item {
+    background-color: $white;
+    padding: 50px 40px;
+    margin: 60px 20px;
+
+    @include mq($tablet-l) {
+       img {
+           margin: 0 auto;
+       }
+    }
+
+    @include mq($phone) {
+        padding: 13px 20px;
+        margin: 40px 20px;
+     }
+}
+
+.card__item-info {
+    text-align: center;
+    margin-top: 70px;
+
+    @include mq($tablet-l) {
+       margin-top: 30px;
+    }
+}
+
+.card__item-info-title {
+    font-size: 20px;
+    font-family: $font-main;
+    font-weight: 700;
+    line-height: 22px;
+    color: $matterhorn;
+    transition: $dur $ease;
+
+    @include hover {
+        &:hover {
+            color: $cinnabar;
+        } 
+    }
+}
+
+.card__item-info-price {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: $cinnabar;
+    font-family: $font-secondary;
+}

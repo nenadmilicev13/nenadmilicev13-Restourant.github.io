@@ -1,0 +1,42 @@
+.brands {
+    padding: 100px 0;
+    background-color: $light;
+
+    @include mq($tablet-l) {
+       padding: 40px 0;
+    }
+
+    @include mq($phone) {
+        padding: 90px 0 30px;
+    }
+}
+
+.brands__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq($tablet-l) {
+        display: block;
+    }
+}
+
+.brand__item {
+    img {
+        filter: grayscale(100%);
+        transition: $dur $ease;
+        
+        @include hover {
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+
+    @include mq($tablet-l) {
+        img {
+            margin: 0 auto 30px;
+        }
+    }
+}

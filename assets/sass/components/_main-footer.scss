@@ -1,0 +1,77 @@
+.main-footer__top {
+    padding: 100px 0;
+    background-color: $light;
+
+    @include mq($tablet-l) {
+        padding: 55px 0;
+    }
+
+    @include mq($phone) {
+        padding: 25px 0;
+    }
+}
+
+.main-footer__item {
+    transition: $dur $ease;
+}
+
+.main-footer__item-title {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: $matterhorn;
+    font-family: $font-main;
+}
+
+.main-footer__item-box {
+    margin-bottom: 30px;
+}
+
+.main-footer__list {
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    color: $grey;
+    font-family: $font-secondary;
+    transition: $dur $ease;
+}
+
+.main-footer__input {
+    margin: 20px 0;
+}
+
+.main-footer__bottom {
+    background-color: $cinnabar;
+}
+
+.main-footer__wrapp {
+    padding: 30px;
+
+    @include mq($phone) {
+       padding: 15px;
+    }
+}
+
+.main-footer__wrapp-text {
+    display: block;
+    text-align: center;
+    color: $white;
+    font-size: 13px;
+
+    @include mq($phone) {
+        font-size: 13px;
+    }
+}
+
+.main-footer__wrapp-text-link {
+    color: $white;
+    transition: $dur $ease;
+    font-weight: bold;
+
+    @include hover {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

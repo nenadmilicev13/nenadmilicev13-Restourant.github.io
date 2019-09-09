@@ -1,0 +1,55 @@
+.discount {
+    position: relative;
+    padding: 60px 0;
+
+    @include mq($tablet-l) {
+        padding: 20px 0;
+    }
+}
+
+.discount__wrapp {
+    background: url('assets/images/cake.jpg') no-repeat center left;
+    padding: 100px 0;
+
+    @include mq($tablet-l) {
+       background-size: 25%;
+    }
+
+    @include mq($phone) {
+        background: none;
+        padding: 45px 0;
+    }
+}
+
+.discount__content {
+    max-width: 560px;
+    width: 100%;
+}
+
+.discount__pretitle {
+    font-size: 36px;
+    text-transform: lowercase;
+    font-family: $font-third;
+    line-height: 39.6px;
+    color: $matterhorn;
+    text-align: center;
+    display: block;
+}
+
+.discount__title {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: $font-main;
+    color: $matterhorn;
+    text-align: center;
+
+    @include mq($phone) {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+.discount-btn {
+    text-align: center;
+}

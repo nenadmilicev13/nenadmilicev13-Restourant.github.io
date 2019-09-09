@@ -1,0 +1,82 @@
+.menu-btn {
+	display: none;
+	position: absolute;
+	z-index: 110;
+	top: 19px;
+	right: 20px;
+	width: 25px;
+    height: 19px;
+
+	&::after,
+	&::before,
+	span {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 3px;
+        background-color: $black;
+    }
+
+	&::after,
+	&::before {
+		content: '';
+		transition: $dur width $dur $ease;
+	}
+
+	&::after {
+		top: 0;
+		left: 0;
+	}
+
+	&::before {
+		right: 0;
+        bottom: 0;
+        width: 25px;
+	}
+
+	span {
+		top: 50%;
+		margin-top: -1.5px;
+		transition: transform $dur $ease;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			transition: transform $dur $ease;
+			background-color: $black;
+		}
+	}
+
+	&.open {
+		&::after,
+		&::before {
+			width: 0;
+			transition: $dur $ease;
+		}
+
+		&::after {
+			left: 0;
+		}
+
+		&::before {
+			right: 0;
+		}
+
+		span {
+			transform: rotate(45deg);
+			transition: $dur transform $dur $ease;
+
+			&::before {
+				transform: rotate(-90deg);
+				transition: $dur transform $dur $ease;
+			}
+		}
+	}
+
+	@include mq($tablet) {
+		display: block;
+	}
+}

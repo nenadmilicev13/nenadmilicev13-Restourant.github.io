@@ -1,0 +1,94 @@
+@font-face {
+	font-family: "fonticons";
+	src: url('assets/icons/fonticons.woff2') format('woff2'), url('assets/icons/fonticons.woff') format('woff'), url('assets/icons/fonticons.ttf') format('truetype');;
+}
+
+@mixin font-styles {
+	font-family: "fonticons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%font {
+	@include font-styles;
+}
+
+@function font-char($filename) {
+	$char: "";
+
+	@if $filename == dribble {
+		$char: "\E001";
+	}
+	@if $filename == facebook-logo {
+		$char: "\E002";
+	}
+	@if $filename == instagram {
+		$char: "\E003";
+	}
+	@if $filename == left-quote {
+		$char: "\E004";
+	}
+	@if $filename == media-play-symbol {
+		$char: "\E005";
+	}
+	@if $filename == pinterest-logo {
+		$char: "\E006";
+	}
+	@if $filename == plus {
+		$char: "\E007";
+	}
+	@if $filename == right-arrow {
+		$char: "\E008";
+	}
+	@if $filename == twitter {
+		$char: "\E009";
+	}
+
+	@return $char;
+}
+
+@mixin font($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %font;
+		} @else {
+			@include font-styles;
+		}
+		content: font-char($filename);
+	}
+}
+
+.font-dribble {
+	@include font(dribble);
+}
+.font-facebook-logo {
+	@include font(facebook-logo);
+}
+.font-instagram {
+	@include font(instagram);
+}
+.font-left-quote {
+	@include font(left-quote);
+}
+.font-media-play-symbol {
+	@include font(media-play-symbol);
+}
+.font-pinterest-logo {
+	@include font(pinterest-logo);
+}
+.font-plus {
+	@include font(plus);
+}
+.font-right-arrow {
+	@include font(right-arrow);
+}
+.font-twitter {
+	@include font(twitter);
+}
+

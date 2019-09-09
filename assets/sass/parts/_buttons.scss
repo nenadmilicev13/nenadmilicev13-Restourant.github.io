@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    padding: 15px 36px;
+    transition: $dur $ease;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-main;
+    color: $white;
+    background-color: $cinnabar;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $matterhorn;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 7px 15px;
+        font-size: 11px;
+	}
+}
+
+.btn-lg {
+    padding: 14px 0;
+    max-width: 433px;
+    width: 100%;
+    display: block;
+}
+
+.btn-md {
+    padding: 13px 35px;
+
+    @include mq($phone) {
+        padding: 9px 21px;
+     }
+}
+
+.btn-sm {
+    padding: 7px 38px;
+}

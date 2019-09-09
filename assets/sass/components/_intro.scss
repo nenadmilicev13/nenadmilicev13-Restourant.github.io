@@ -1,0 +1,54 @@
+.intro {
+    margin-top: 122px;
+    padding: 100px 0;
+
+    @include mq($tablet-l) {
+        padding: 55px 0;
+    }
+}
+
+.intro__item {
+    @include mq($tablet) {
+       text-align: center;
+       margin: 0 auto;
+
+       img {
+           margin: 0 auto;
+       }
+    }
+
+    @include mq($phone) {
+        text-align: left;
+     }
+}
+
+.intro__title {
+    font-size: 36px;
+    font-family: $font-third;
+    text-transform: capitalize;
+    color: $materh;
+    margin-bottom: 7px;
+
+    @include mq($phone) {
+       font-size: 30px;
+    }
+}
+
+.intro__subtitle {
+    font-size: 16px;
+    color: $materh;
+    font-family: $font-secondary;
+    margin-bottom: 22px;
+
+    @include mq($phone) {
+        font-size: 15px;
+     }
+}
+
+.intro__item-read-more {
+    margin-top: 35px;
+
+    @include mq($phone) {
+        margin: 17px 0 30px;
+    }
+}

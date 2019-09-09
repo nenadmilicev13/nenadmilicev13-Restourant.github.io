@@ -1,0 +1,151 @@
+.menu {
+    padding: 100px 0;
+    position: relative;
+
+    @include mq($tablet-l) {
+        padding: 60px 0;
+    }
+
+    @include mq($phone) {
+        padding: 33px;
+    }
+}
+
+.menu__box {
+    margin-top: 60px;
+}
+
+.menu__box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu__box-wrapp {
+    text-align: center;
+    padding: 60px 0;
+    box-shadow: 0 0 7px rgba($black, 0.1);
+    position: relative;
+    margin-bottom: 60px;
+
+    @include mq($phone) {
+        padding: 24px 0;
+    }
+}
+
+.menu__box-list {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.menu__box-link {
+    text-transform: uppercase;
+    padding: 59px 15px;
+    font-size: 14px;
+    font-family: $font-main;
+    font-weight: 600;
+    color: $matterhorn;
+    transition: $dur $ease;
+
+    @include hover {
+        &:hover {
+            color: $cinnabar;
+        }
+    }
+
+    @include mq($phone) {
+       font-size: 13px;
+    }
+}
+
+.menu__box-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid $light;
+    max-width: 486px;
+    width: 100%;
+    margin-bottom: 32px;
+
+    @include mq($tablet-l) {
+        margin: 0 auto 32px;
+        width: auto;
+    }
+
+    @include mq($phone) {
+        display: block;
+    }
+}
+
+.menu__box-item-wrapp {
+    display: flex;
+    align-items: center;
+
+    @include mq($phone) {
+        border-bottom: 1px solid $light;
+    }
+}
+
+.menu__box-item-image {
+    img {
+        width: 106px;
+        height: 66px;
+        margin: 12px 0;
+    }
+}
+
+.menu__box-item-info {
+    padding: 20px;
+    border-left: 1px solid $light;
+
+    .food-name {
+        font-size: 16px;
+        text-transform: capitalize;
+        margin-bottom: 2px;
+        color: $matterhorn;
+        font-family: $font-main;
+        font-weight: 700;
+        transition: $dur $ease;
+
+        @include hover {
+            &:hover {
+                color: $cinnabar;
+            }
+        }
+    }
+
+    .food-ingredients {
+        display: block;
+        font-family: $font-secondary;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    @include mq($phone) {
+        .food-ingredients {
+            font-size: 13px;
+            line-height: 22px;
+        }
+    }
+    
+}
+
+.menu__box-item-price {
+    margin-left: 60px;
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 600px;
+    color: $cinnabar;
+
+    @include mq($phone) {
+        margin-left: -9px;
+        padding-right: 15px;
+    }
+
+    @include mq($phone) {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+        padding-right: 0;
+        font-size: 22px;
+    }
+}

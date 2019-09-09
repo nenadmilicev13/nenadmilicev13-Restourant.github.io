@@ -1,0 +1,159 @@
+.banner {
+    position: relative;
+    top: 122px;
+
+    .slick-dots {
+        @include center(x, absolute);
+        bottom: 50px;
+
+        &:focus {
+            outline: none;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 5px;
+
+            &:only-child {
+                display: none;
+            }
+        }
+
+        button {
+            width: 11px;
+            min-width: initial;
+            height: 11px;
+            padding: 0;
+            border: 1px solid $black;
+            border-radius: 50%;
+            background-color: transparent;
+            line-height: 9px;
+            text-indent: -2000em;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+	li.slick-active button {
+		background-color: $cinnabar;
+	}
+}
+
+.banner__content {
+    max-width: 566px;
+    width: 100%;
+    left: 16.8%;
+    @include center(y, absolute);
+
+    @include mq($phone) {
+       max-width: 100%;
+       width: auto;
+    }
+}
+
+.banner__content-center {
+    @include center(xy, absolute);
+    max-width: 566px;
+    width: 100%;
+    text-align: center;
+}
+
+.banner__content-pretitle {
+    font-family: $font-third;
+    font-size: 36px;
+    line-height: 39.6px;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 2px;
+    color: $matterhorn;
+
+    @include mq($phone) {
+        font-size: 27px;
+    }
+}
+
+.banner-content__title {
+    font-size: 45px;
+    font-family: $font-main;
+    font-weight: 700;
+    line-height: 55px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $matterhorn;
+
+    @include mq($phone) {
+        font-size: 28px;
+        line-height: 43px;
+    }
+}
+
+.banner-content__subtitle {
+    font-size: 14px;
+    font-family: $font-secondary;
+    line-height: 24px;
+    color: $grey;
+    margin-bottom: 10px;
+
+    @include mq($phone) {
+        font-size: 13px;
+    }
+}
+
+.banner__content-pretitle--red,
+.banner__content-title--red {
+    color: $cinnabar;
+}
+
+.slider-item__container {
+    position: relative;
+}
+
+.slider-item {
+    height: 815px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.social-media {
+    @include center(y, absolute);
+    left: 3%;
+
+    .socia-media__icon {
+        position: relative;
+        padding-bottom: 62px;
+        margin-bottom: 15px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 45px;
+            left: 5px;
+            background-color: $cinnabar;
+            bottom: 0;
+        }
+
+    }
+
+    .icon {
+        display: block;
+        font-size: 14px;
+        color: $grey;
+        margin-bottom: 8px;
+        transition: $dur $ease;
+
+        @include hover {
+            &:hover {
+                color: $cinnabar;
+            }
+        }
+    }
+
+    .social-media__text {
+        writing-mode: vertical-rl;
+        transform: rotate3d(0, 0, 1, 180deg);
+        font-size: 14px;
+        margin-left: -7px;
+    }
+}
