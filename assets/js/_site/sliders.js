@@ -33,10 +33,10 @@ const Sliders = {
 		//cards slider 
 		cards.slick({
 			slidesToShow: 3,
-			slidesToScroll: 3,
+			slidesToScroll: 1,
 			dots: true,
 			arrows: false,
-			// autoplay: true,
+			autoplay: true,
 			responsive: [
 				{
 					breakpoint: 1024,

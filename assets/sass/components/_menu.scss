@@ -40,7 +40,7 @@
 
 .menu__box-link {
     text-transform: uppercase;
-    padding: 59px 15px;
+    padding: 10px 15px;
     font-size: 14px;
     font-family: $font-main;
     font-weight: 600;
@@ -55,6 +55,7 @@
 
     @include mq($phone) {
        font-size: 13px;
+       padding: 3px;
     }
 }
 

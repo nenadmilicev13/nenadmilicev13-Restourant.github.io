@@ -4299,7 +4299,7 @@ img {
 
 .menu__box-link {
   text-transform: uppercase;
-  padding: 59px 15px;
+  padding: 10px 15px;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -4318,6 +4318,7 @@ img {
 @media screen and (max-width: 768px) {
   .menu__box-link {
     font-size: 13px;
+    padding: 3px;
   }
 }
 
